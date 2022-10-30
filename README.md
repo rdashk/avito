@@ -10,7 +10,7 @@
 
 CREATE TABLE `test`.`users` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
-CREATE TABLE `test`.`balance` () ENGINE = InnoDB;
+CREATE TABLE `test`.`balance` (`user_id` INT NOT NULL , `balance` DOUBLE NOT NULL ) ENGINE = InnoDB;
 
 CREATE TABLE `test`.`orders` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
@@ -19,6 +19,8 @@ CREATE TABLE `test`.`reserve_money` (`id` INT NOT NULL AUTO_INCREMENT , `user_id
 CREATE TABLE `test`.`report` (`id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT NULL , `service_id` INT NOT NULL , `order_id` INT NOT NULL , `cash` DOUBLE NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 *Далее заполнены следующими значениями:*
+
+INSERT INTO `users`(`name`) VALUES ('Мария'),('Иван'),('Tata'),('Игорь'),('Олег Олегов');
 
 INSERT INTO `services`(`name`, `price`) VALUES ('подстричь газон','1000'), ('ламинирование ресниц','1500'),('мастер на час','2000');
 
