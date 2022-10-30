@@ -1,0 +1,2 @@
+# avito
+First golang project
